@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas - Teach 3035</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <div class="logo">
+                <h1>Teach<span>3035</span></h1>
+            </div>
+        </header>
+
+        <main class="conteudo-principal">
+            <div class="cartao">
+                <h2 class="titulo">Minha Lista de Tarefas</h2>
+                
+                <div class="formulario-adicionar-tarefa">
+                    <input 
+                        type="text" 
+                        id="campoTarefa" 
+                        placeholder="Digite o nome da tarefa..."
+                        class="campo-entrada"
+                    >
+                    <button onclick="adicionarTarefa()" class="botao-primario">
+                        Adicionar Tarefa
+                    </button>
+                </div>
+
+                <div class="filtros">
+                    <button onclick="filtrarTarefas('todas')" class="botao-filtro ativo" id="botaoTodas">
+                        Todas
+                    </button>
+                    <button onclick="filtrarTarefas('pendentes')" class="botao-filtro" id="botaoPendentes">
+                        Pendentes
+                    </button>
+                    <button onclick="filtrarTarefas('concluidas')" class="botao-filtro" id="botaoConcluidas">
+                        Concluídas
+                    </button>
+                </div>
+
+                <div id="listaTarefas" class="lista-tarefas">
+                </div>
+
+                <div class="contador-tarefas">
+                    <span id="contadorTarefas">0 tarefas pendentes</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <p>© 2025 Teach 3035 - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
